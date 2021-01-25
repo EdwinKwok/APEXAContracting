@@ -1,0 +1,75 @@
+﻿@page
+@model APEXAContracting.Web.Pages.Contract.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Contract List</h1>
+
+<p>
+    <a asp-page="Create"><i class="fas fa-plus"></i>&nbsp;Create New Contract</a> &nbsp;|
+    <a asp-page="./FindContract"><i class="fas fa-search"></i>Find Contract</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ContractVM[0].OfferedByKey)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ContractVM[0].AcceptedBykey)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ContractVM[0].ContractName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ContractVM[0].EffectedOn)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ContractVM[0].ExpiredOn)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ContractVM[0].IsDeleted)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ContractVM[0].IsExpired)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.ContractVM)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OfferedByKey)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AcceptedBykey)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ContractName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EffectedOn)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ExpiredOn)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IsDeleted)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IsExpired)
+                </td>
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@item.Id"><i class="fas fa-pencil-alt"></i>Edit</a> |
+                    <a asp-page="./Details" asp-route-id="@item.Id"><i class="far fa-file-alt"></i>Details</a> |
+                    <a asp-page="./Delete" asp-route-id="@item.Id"><i class="fas fa-times"></i>Terminate</a>
+                    
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

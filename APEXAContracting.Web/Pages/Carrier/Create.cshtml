@@ -1,0 +1,79 @@
+﻿@page
+@model APEXAContracting.Web.Pages.Carrier.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Add New Carrier</h1>
+
+@*<h4>BusinessUnitVM</h4>*@
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                Business&nbsp;<label asp-for="BusinessUnitVM.Name" class="control-label"></label>
+                <input asp-for="BusinessUnitVM.Name" class="form-control" />
+                <span asp-validation-for="BusinessUnitVM.Name" class="text-danger"></span>
+            </div>
+            @*<div class="form-group">
+                    <label asp-for="BusinessUnitVM.Name2" class="control-label"></label>
+                    <input asp-for="BusinessUnitVM.Name2" class="form-control" />
+                    <span asp-validation-for="BusinessUnitVM.Name2" class="text-danger"></span>
+                </div>*@
+            <div class="form-group">
+                Business&nbsp;<label asp-for="BusinessUnitVM.Address" class="control-label"></label>
+                <input asp-for="BusinessUnitVM.Address" class="form-control" />
+                <span asp-validation-for="BusinessUnitVM.Address" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                Business&nbsp;<label asp-for="BusinessUnitVM.Phone" class="control-label"></label>
+                <input asp-for="BusinessUnitVM.Phone" class="form-control" />
+                <span asp-validation-for="BusinessUnitVM.Phone" class="text-danger"></span>
+            </div>
+            @*<div class="form-group">
+                    <label asp-for="BusinessUnitVM.HierarchyPrefix" class="control-label"></label>
+                    <input asp-for="BusinessUnitVM.HierarchyPrefix" class="form-control" />
+                    <span asp-validation-for="BusinessUnitVM.HierarchyPrefix" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="BusinessUnitVM.HierarchyKey" class="control-label"></label>
+                    <input asp-for="BusinessUnitVM.HierarchyKey" class="form-control" />
+                    <span asp-validation-for="BusinessUnitVM.HierarchyKey" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="BusinessUnitVM.HealthStatusId" class="control-label"></label>
+                    <input asp-for="BusinessUnitVM.HealthStatusId" class="form-control" />
+                    <span asp-validation-for="BusinessUnitVM.HealthStatusId" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="BusinessUnitVM.BusinessTypeId" class="control-label"></label>
+                    <input asp-for="BusinessUnitVM.BusinessTypeId" class="form-control" />
+                    <span asp-validation-for="BusinessUnitVM.BusinessTypeId" class="text-danger"></span>
+                </div>
+                <div class="form-group form-check">
+                    <label class="form-check-label">
+                        <input class="form-check-input" asp-for="BusinessUnitVM.IsDeleted" /> @Html.DisplayNameFor(model => model.BusinessUnitVM.IsDeleted)
+                    </label>
+                </div>
+                <div class="form-group form-check">
+                    <label class="form-check-label">
+                        <input class="form-check-input" asp-for="BusinessUnitVM.IsNewRecord" /> @Html.DisplayNameFor(model => model.BusinessUnitVM.IsNewRecord)
+                    </label>
+                </div>*@
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,72 @@
+﻿@page
+@model APEXAContracting.Web.Pages.Contract.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Update Contract</h1>
+
+<h4>@Html.DisplayFor(model => model.ContractVM.ContractName)</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="ContractVM.Id" />
+            <div class="form-group">
+                <input type="hidden" asp-for="ContractVM.OfferedById" class="form-control" />
+            </div>
+            <div class="form-group">
+                <input type="hidden" asp-for="ContractVM.AcceptedById" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="ContractVM.OfferedByKey" class="control-label"></label>
+                <input asp-for="ContractVM.OfferedByKey" class="form-control" />
+                <span asp-validation-for="ContractVM.OfferedByKey" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ContractVM.AcceptedBykey" class="control-label"></label>
+                <input asp-for="ContractVM.AcceptedBykey" class="form-control" />
+                <span asp-validation-for="ContractVM.AcceptedBykey" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ContractVM.ContractName" class="control-label"></label>
+                <input asp-for="ContractVM.ContractName" class="form-control" />
+                <span asp-validation-for="ContractVM.ContractName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ContractVM.EffectedOn" class="control-label"></label>
+                <input asp-for="ContractVM.EffectedOn" class="form-control" />
+                <span asp-validation-for="ContractVM.EffectedOn" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ContractVM.ExpiredOn" class="control-label"></label>
+                <input asp-for="ContractVM.ExpiredOn" class="form-control" />
+                <span asp-validation-for="ContractVM.ExpiredOn" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="ContractVM.IsDeleted" /> @Html.DisplayNameFor(model => model.ContractVM.IsDeleted)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="ContractVM.IsExpired" /> @Html.DisplayNameFor(model => model.ContractVM.IsExpired)
+                </label>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

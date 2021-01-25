@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Base\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="GoogleMaps.LocationServices" Version="1.2.0.5" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Graph" Version="3.0.0" />
+    <PackageReference Include="Microsoft.Graph.Core" Version="1.20.0" />
+    <PackageReference Include="Microsoft.Identity.Client" Version="4.7.1" />
+    <PackageReference Include="Microsoft.IdentityModel.Clients.ActiveDirectory" Version="5.2.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\APEXAContracting.Business.Interface\APEXAContracting.Business.Interface.csproj" />
+    <ProjectReference Include="..\APEXAContracting.Common\APEXAContracting.Common.csproj" />
+    <ProjectReference Include="..\APEXAContracting.DataAccess\APEXAContracting.DataAccess.csproj" />
+    <ProjectReference Include="..\APEXAContracting.Model.DTO\APEXAContracting.Model.DTO.csproj" />
+    <ProjectReference Include="..\APEXAContracting.Model.Entity\APEXAContracting.Model.Entity.csproj" />
+    <ProjectReference Include="..\APEXAContracting.Model.Mapper\APEXAContracting.Model.Mapper.csproj" />
+  </ItemGroup>
+
+</Project>

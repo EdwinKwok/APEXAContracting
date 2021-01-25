@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>APEXAContracting</id>
+    <version>0.0.0</version>
+    <title>.Net Core 3.1 solution</title>
+    <authors>Felix Yang</authors>
+    <owners>Felix Yang</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectUrl>https://dapasoft-projects.visualstudio.com/</projectUrl>
+    <description>.Net Core 3.1 solution template</description>
+    <summary>This package is used to create .Net Core 3.1 web applications with identity server 4.</summary>
+    <tags>APEXAContracting .Net Core solution template</tags>
+    <packageTypes>
+      <packageType name="Solution Template" />
+    </packageTypes>
+  </metadata>
+</package>

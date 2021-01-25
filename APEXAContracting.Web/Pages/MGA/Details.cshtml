@@ -1,0 +1,79 @@
+﻿@page
+@model APEXAContracting.Web.Pages.Carrier.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>MGA Details</h1>
+
+<div>
+    <h4> @Html.DisplayFor(model => model.BusinessUnitVM.Name)</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            Business&nbsp;@Html.DisplayNameFor(model => model.BusinessUnitVM.Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.BusinessUnitVM.Name)
+        </dd>
+        @*<dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.BusinessUnitVM.Name2)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.BusinessUnitVM.Name2)
+            </dd>*@
+        <dt class="col-sm-2">
+            Business&nbsp;@Html.DisplayNameFor(model => model.BusinessUnitVM.Address)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.BusinessUnitVM.Address)
+        </dd>
+        <dt class="col-sm-2">
+            Business&nbsp;@Html.DisplayNameFor(model => model.BusinessUnitVM.Phone)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.BusinessUnitVM.Phone)
+        </dd>
+        @*<dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.BusinessUnitVM.HierarchyPrefix)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.BusinessUnitVM.HierarchyPrefix)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.BusinessUnitVM.HierarchyKey)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.BusinessUnitVM.HierarchyKey)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.BusinessUnitVM.HealthStatusId)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.BusinessUnitVM.HealthStatusId)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.BusinessUnitVM.BusinessTypeId)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.BusinessUnitVM.BusinessTypeId)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.BusinessUnitVM.IsDeleted)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.BusinessUnitVM.IsDeleted)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.BusinessUnitVM.IsNewRecord)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.BusinessUnitVM.IsNewRecord)
+            </dd>*@
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.BusinessUnitVM.Id">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

@@ -1,0 +1,77 @@
+﻿@page
+@model APEXAContracting.Web.Pages.Contract.FindContractModel
+@{
+}
+
+<h1>Find Contract</h1>
+
+<form method="post">
+    <div class="form-group">
+        <label asp-for="ContractVM.OfferedByKey" class="control-label"></label>
+        <input placeholder="CAR<00001>" name="txtOfferedByKey" class="form-control" />
+        <span asp-validation-for="ContractVM.OfferedByKey" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="ContractVM.AcceptedBykey" class="control-label"></label>
+        <input placeholder="CAR<00001>" name="txtAcceptedBykey"  class="form-control" />
+        <span asp-validation-for="ContractVM.AcceptedBykey" class="text-danger"></span>
+    </div>
+
+    <input type="submit">
+
+    @ViewData["msg"]
+</form>
+
+
+<div>
+    <h4> @Html.DisplayFor(model => model.ContractVM.ContractName)</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ContractVM.OfferedByKey)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ContractVM.OfferedByKey)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ContractVM.AcceptedBykey)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ContractVM.AcceptedBykey)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ContractVM.ContractName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ContractVM.ContractName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ContractVM.EffectedOn)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ContractVM.EffectedOn)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ContractVM.ExpiredOn)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ContractVM.ExpiredOn)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ContractVM.IsDeleted)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ContractVM.IsDeleted)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ContractVM.IsExpired)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ContractVM.IsExpired)
+        </dd>
+    </dl>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

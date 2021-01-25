@@ -1,0 +1,93 @@
+﻿@page
+@model APEXAContracting.Web.Pages.Advisor.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Advisor List</h1>
+
+<p>
+    <a asp-page="Create"><i class="fas fa-plus"></i>&nbsp;Create New Advisor</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.BusinessUnitVM[0].Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BusinessUnitVM[0].Name2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BusinessUnitVM[0].Address)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BusinessUnitVM[0].Phone)
+            </th>
+            @*<th>
+                    @Html.DisplayNameFor(model => model.BusinessUnitVM[0].HierarchyPrefix)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.BusinessUnitVM[0].HierarchyKey)
+                </th>*@
+            <th>
+                Health Status
+                @*@Html.DisplayNameFor(model => model.BusinessUnitVM[0].HealthStatusColor)*@
+            </th>
+            @*<th>
+                    @Html.DisplayNameFor(model => model.BusinessUnitVM[0].BusinessTypeName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.BusinessUnitVM[0].IsDeleted)
+                </th>
+                <th>
+                        @Html.DisplayNameFor(model => model.BusinessUnitVM[0].IsNewRecord)
+                    </th>*@
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.BusinessUnitVM)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name2)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Address)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Phone)
+                </td>
+                @*<td>
+                        @Html.DisplayFor(modelItem => item.HierarchyPrefix)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.HierarchyKey)
+                    </td>*@
+                <td>
+                    @Html.DisplayFor(modelItem => item.HealthStatusColor)
+                </td>
+                @*<td>
+                        @Html.DisplayFor(modelItem => item.BusinessTypeName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.IsDeleted)
+                    </td>
+                    <td>
+                            @Html.DisplayFor(modelItem => item.IsNewRecord)
+                        </td>*@
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@item.Id"><i class="fas fa-pencil-alt"></i>Edit</a> |
+                    <a asp-page="./Details" asp-route-id="@item.Id"><i class="far fa-file-alt"></i>Details</a> |
+                    <a asp-page="./Delete" asp-route-id="@item.Id"><i class="fas fa-times"></i>Delete</a>
+                </td>
+            </tr>
+        }
+
+    </tbody>
+</table>

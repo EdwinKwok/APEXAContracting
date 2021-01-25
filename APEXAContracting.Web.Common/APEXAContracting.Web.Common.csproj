@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="IdentityModel" Version="3.10.10" />
+    <PackageReference Include="IdentityModel.AspNetCore.OAuth2Introspection" Version="3.5.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.SignalR" Version="1.1.0" />
+    <PackageReference Include="System.Net.Http" Version="4.3.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\APEXAContracting.Business.Interface\APEXAContracting.Business.Interface.csproj" />
+    <ProjectReference Include="..\APEXAContracting.Business\APEXAContracting.Business.csproj" />
+    <ProjectReference Include="..\APEXAContracting.Model.DTO\APEXAContracting.Model.DTO.csproj" />
+  </ItemGroup>
+
+</Project>

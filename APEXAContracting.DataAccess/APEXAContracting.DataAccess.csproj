@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\APEXAContracting.DataAccess.DotNetCore\APEXAContracting.DataAccess.DotNetCore.csproj" />
+    <ProjectReference Include="..\APEXAContracting.Common\APEXAContracting.Common.csproj" />
+    <ProjectReference Include="..\APEXAContracting.Model.Entity\APEXAContracting.Model.Entity.csproj" />
+  </ItemGroup>
+
+</Project>

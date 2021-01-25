@@ -1,0 +1,7 @@
+﻿CREATE TABLE [dbo].[BusinessType]
+(
+	[Id] TINYINT IDENTITY(1,1) NOT NULL,
+	[Name] NVARCHAR(50) NOT NULL,
+	[IsDeleted] bit NOT NULL DEFAULT 0,
+	CONSTRAINT [PK_BusinessType] PRIMARY KEY ([Id])
+)
