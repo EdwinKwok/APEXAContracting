@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿/*
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
 namespace APEXAContracting.WebAPI.Controllers
@@ -23,3 +24,4 @@ namespace APEXAContracting.WebAPI.Controllers
         }
     }
 }
+*/
